@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Th3inspector
+Encoding=UTF-8
+Exec=sh -c "th3inspector;${SHELL:-bash}"
+Icon=th3inspector.png
+StartupNotify=false
+Terminal=true
+Type=Application
+Categories=01-info-gathering;
+X-Kali-Package=th3inspectort
+Name[C]=th3inspector
