@@ -161,6 +161,7 @@ chmod +x install.sh && ./install.sh
 ```bash
 Download Perl
 Download Th3inspector
+cpan install JSON
 Extract Th3inspector into Desktop
 Open CMD and type the following commands:
 cd Desktop/Th3inspector-master/
