@@ -1,5 +1,6 @@
 #!/usr/bin/perl
 
+use if $^O eq "MSWin32", Win32::Console::ANSI;
 use Getopt::Long;
 use HTTP::Request;
 use LWP::UserAgent;
