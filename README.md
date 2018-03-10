@@ -142,7 +142,7 @@
 ## Installation [Linux](https://wikipedia.org/wiki/Linux) [![alt tag](http://icons.iconarchive.com/icons/dakirby309/simply-styled/32/OS-Linux-icon.png)](https://fr.wikipedia.org/wiki/Linux)
 
 ```bash
-git clone https://github.com/Moham3dRiahi/XAttacker.git
+git clone https://github.com/Moham3dRiahi/Th3inspector.git
 cd Th3inspector
 chmod +x install.sh && ./install.sh
 ```
@@ -152,7 +152,7 @@ chmod +x install.sh && ./install.sh
 Download [Termux](https://play.google.com/store/apps/details?id=com.termux)
 
 ```bash
-git clone https://github.com/Moham3dRiahi/XAttacker.git
+git clone https://github.com/Moham3dRiahi/Th3inspector.git
 cd Th3inspector
 chmod +x install.sh && ./install.sh
 ```
