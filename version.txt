@@ -1,3 +1,0 @@
-<version>1.1</version>
-<new>Speed up</new>
-<new>Bug fixes</new>
