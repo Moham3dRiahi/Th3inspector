@@ -223,7 +223,7 @@ print color("bold white"),"Content Management System Checker\n";
 print color('bold red')," [";
 print color('bold green'),"14";
 print color('bold red'),"] ";
-print color("bold white"),"Install & Update\n\n";
+print color("bold white"),"Update\n\n";
 print color('bold red')," [";
 print color('bold green'),"-";
 print color('bold red'),"] ";
