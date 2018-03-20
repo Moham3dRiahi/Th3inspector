@@ -1289,82 +1289,60 @@ sub BIN {
 $ua = LWP::UserAgent->new(keep_alive => 1);
 $ua->agent("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.63 Safari/537.31");
 
-$url = "https://api.freebinchecker.com/bin/$bin";
+$url = "https://lookup.binlist.net/$bin";
 $request = $ua->get($url);
 $response = $request->content;
-
-my $responseObject = decode_json($response);
  
-if (exists $responseObject->{'card'}->{'brand'}){ 
+if($response =~/scheme/){
 print color('bold red')," [";
 print color('bold green'),"+";
 print color('bold red'),"] ";
 print color("bold white"),"Credit card BIN number: $bin XX XXXX XXXX\n";
+if($response =~/scheme":"(.*?)"/){
 print color('bold red')," [";
 print color('bold green'),"+";
-print color('bold red'),"] ";   
-print color("bold white"),'Credit card brand: ',    
-$responseObject->{'card'}->{'brand'},"\n";
-if (exists $responseObject->{'card'}->{'type'}){ 
+print color('bold red'),"] ";
+print color("bold white"),"Credit card brand: $1\n";
+}if($response =~/type":"(.*?)"/){
 print color('bold red')," [";
 print color('bold green'),"+";
-print color('bold red'),"] ";   
-print color("bold white"),'Type: ',    
-$responseObject->{'card'}->{'type'},"\n";} 
-if (exists $responseObject->{'card'}->{'category'}){ 
+print color('bold red'),"] ";
+print color("bold white"),"Type: $1\n";
+}if($response =~/name":"(.*?)"/){
 print color('bold red')," [";
 print color('bold green'),"+";
-print color('bold red'),"] ";   
-print color("bold white"),'Category: ',    
-$responseObject->{'card'}->{'category'},"\n";} 
-if (exists $responseObject->{'card'}->{'sub-category'}){ 
+print color('bold red'),"] ";
+print color("bold white"),"Bank: $1\n";
+}if($response =~/url":"(.*?)"/){
 print color('bold red')," [";
 print color('bold green'),"+";
-print color('bold red'),"] ";   
-print color("bold white"),'Sub Category: ',    
-$responseObject->{'card'}->{'sub-category'},"\n";}
-if (exists $responseObject->{'issuer'}->{'name'}){ 
+print color('bold red'),"] ";
+print color("bold white"),"Bank URL: $1\n";
+}if($response =~/phone":"(.*?)"/){
 print color('bold red')," [";
 print color('bold green'),"+";
-print color('bold red'),"] ";   
-print color("bold white"),'Bank: ',    
-$responseObject->{'issuer'}->{'name'},"\n";}
-if (exists $responseObject->{'issuer'}->{'url'}){ 
+print color('bold red'),"] ";
+print color("bold white"),"Bank Phone: $1\n";
+}if($response =~/alpha2":"(.*?)","name":"(.*?)"/){
 print color('bold red')," [";
 print color('bold green'),"+";
-print color('bold red'),"] ";   
-print color("bold white"),'Bank URL: ',    
-$responseObject->{'issuer'}->{'url'},"\n";}
-if (exists $responseObject->{'issuer'}->{'tel'}){ 
+print color('bold red'),"] ";
+print color("bold white"),"Country Short: $1\n";    
 print color('bold red')," [";
 print color('bold green'),"+";
-print color('bold red'),"] ";   
-print color("bold white"),'Bank Phone: ',    
-$responseObject->{'issuer'}->{'tel'},"\n";} 
-if (exists $responseObject->{'country'}->{'name'}){ 
+print color('bold red'),"] ";
+print color("bold white"),"Country: $2\n";
+}if($response =~/latitude":"(.*?)"/){
 print color('bold red')," [";
 print color('bold green'),"+";
-print color('bold red'),"] ";   
-print color("bold white"),'Country: ',    
-$responseObject->{'country'}->{'name'},"\n";} 
-if (exists $responseObject->{'country'}->{'alpha-2-code'}){ 
+print color('bold red'),"] ";
+print color("bold white"),"Latitude: $1\n";
+}if($response =~/longitude":"(.*?)"/){
 print color('bold red')," [";
 print color('bold green'),"+";
-print color('bold red'),"] ";   
-print color("bold white"),'Country Short: ',    
-$responseObject->{'country'}->{'alpha-2-code'},"\n";} 
-if (exists $responseObject->{'country'}->{'latitude'}){ 
-print color('bold red')," [";
-print color('bold green'),"+";
-print color('bold red'),"] ";   
-print color("bold white"),'Latitude: ',    
-$responseObject->{'country'}->{'latitude'},"\n";} 
-if (exists $responseObject->{'country'}->{'longitude'}){ 
-print color('bold red')," [";
-print color('bold green'),"+";
-print color('bold red'),"] ";   
-print color("bold white"),'Longitude: ',    
-$responseObject->{'country'}->{'longitude'},"\n";} 
+print color('bold red'),"] ";
+print color("bold white"),"Longitude: $1\n";
+}
 }else{
 print color('bold red')," [";
 print color('bold green'),"+";
