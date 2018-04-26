@@ -363,7 +363,7 @@ sub Websiteinformation {
         print item('3'),"Check If Website Working\n";
     }
     my %seen;
-    while($response =~m/value":"(.*?)."/g)
+    while($response =~m/"value": "(.*?)."/g)
     {
         $ns=$1;
         next if $seen{$ns}++;
@@ -442,11 +442,11 @@ sub FindIPaddressandemailserver {
     }
     print item(),"Domain name for MX records: $site2\n\n";
     my %seen;
-    while($response =~m/value":"(.*?) (.*?)."/g)
+   while($response =~m/"value": "(.*?)."/g)
     {
-        $mx=$2;
+        $mx=$1;
         next if $seen{$mx}++;
-        print item(),"$mx -- priority $1\n";
+        print item(),"MX: $mx \n";
     }
 }
 ### Domain whois lookup ###########
@@ -633,8 +633,8 @@ sub CloudFlare {
     $request = $ua->get($url);
     $response = $request->content;
 
-    my %seen;
-    while($response =~m/value":"(.*?)."/g)
+my %seen;
+    while($response =~m/"value": "(.*?)."/g)
     {
         $ns=$1;
         next if $seen{$ns}++;
