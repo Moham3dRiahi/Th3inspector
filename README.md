@@ -8,11 +8,11 @@
 <h4>Th3inspector 🕵️ best tool for Information Gathering 🔎</h4>
 <img src="https://i.imgur.com/Q81YJCU.png" data-canonical-src="https://i.imgur.com/niFwcaM.png" width="700" height="470">
 <hr>
-<a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank"><img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook"></a>
+<a href="http://www.facebook.com/sharer.php?u=https://github.com/Moham3dRiahi/Th3inspector"><img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook"></a>
 <a href="https://plus.google.com/share?url=https://github.com/Moham3dRiahi/Th3inspector"><img src="https://simplesharebuttons.com/images/somacro/google.png"></a>
 <a href="https://twitter.com/share?url=https://github.com/Moham3dRiahi/Th3inspector&amp;text= Th3Inspector 🕵️ Best Tool For Information Gathering 🔎&amp;hashtags=Th3inspector
 "><img src="https://simplesharebuttons.com/images/somacro/twitter.png"></a>
-<a href="http://reddit.com/submit?url=https://simplesharebuttons.com&amp;title=Simple Share Buttons"><img src="https://simplesharebuttons.com/images/somacro/reddit.png"></a>
+<a href="http://reddit.com/submit?url=https://github.com/Moham3dRiahi/Th3inspector&amp;title=Th3Inspector 🕵️ Best Tool For Information Gathering 🔎"><img src="https://simplesharebuttons.com/images/somacro/reddit.png"></a>
 <hr>
 <h2>Screenshots</h2>
 
