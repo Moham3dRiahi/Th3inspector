@@ -574,41 +574,29 @@ sub Findwebsitelocation {
 
     $url = "https://ipapi.co/$ip/json/";
     $request = $ua->get($url);
-    $response = $request->content;
+    $r = decode_json $request->content;
 
-    if($response =~/country_name": "(.*?)"/){
+    if ( defined $r )
+    {
         print item(),"IP Address: $ip\n";
-        print item(),"Country: $1\n";
-        if($response =~/city": "(.*?)"/){
-            print item(),"City: $1\n";
-        }if($response =~/region": "(.*?)"/){
-            print item(),"Region: $1\n";
-        }if($response =~/region_code": "(.*?)"/){
-            print item(),"Region Code: $1\n";
-        }if($response =~/continent_code": "(.*?)"/){
-            print item(),"Continent Code: $1\n";
-        }if($response =~/postal": "(.*?)"/){
-            print item(),"Postal Code: $1\n";
-        }if($response =~/latitude": (.*?),/){
-            print item(),"Latitude / Longitude: $1, ";
-        }if($response =~/longitude": (.*?),/){
-            print color("bold white"),"$1\n";
-        }if($response =~/timezone": "(.*?)"/){
-            print item(),"Timezone: $1\n";
-        }if($response =~/utc_offset": "(.*?)"/){
-            print item(),"Utc Offset: $1\n";
-        }if($response =~/country_calling_code": "(.*?)"/){
-            print item(),"Calling Code: $1\n";
-        }if($response =~/currency": "(.*?)"/){
-            print item(),"Currency: $1\n";
-        }if($response =~/languages": "(.*?)"/){
-            print item(),"Languages: $1\n";
-        }if($response =~/asn": "(.*?)"/){
-            print item(),"ASN: $1\n";
-        }if($response =~/org": "(.*?)"/){
-            print item(),"ORG: $1\n";
-        }
-    }else {
+        print item(),"Country: ",              $r->{country}, "\n"                                             if ( defined $r->{country} );
+        print item(),"Country name: ",         $r->{country_name}, "\n"                                        if ( defined $r->{country_name} );
+        print item(),"City: ",                 $r->{city},"\n"                                                 if ( defined $r->{city} );
+        print item(),"Region: ",               $r->{region},"\n"                                               if ( defined $r->{region} );
+        print item(),"Region Code: ",          $r->{region_code},"\n"                                          if ( defined $r->{region_code} );
+        print item(),"Continent Code: ",       $r->{continent_code},"\n"                                       if ( defined $r->{continent_code} );
+        print item(),"Postal Code: ",          $r->{postal},"\n"                                               if ( defined $r->{postal} );
+        print item(),"Latitude / Longitude: ", $r->{latitude}," / ", color("bold white"), $r->{longitude},"\n" if ( defined $r->{latitude} && defined $r->{longitude} );
+        print item(),"Timezone: ",             $r->{timezone},"\n"                                             if ( defined $r->{timezone} );
+        print item(),"Utc Offset: ",           $r->{utc_offset},"\n"                                           if ( defined $r->{utc_offset} );
+        print item(),"Calling Code: ",         $r->{country_calling_code},"\n"                                 if ( defined $r->{country_calling_code} );
+        print item(),"Currency: ",             $r->{currency},"\n"                                             if ( defined $r->{currency} );
+        print item(),"Languages: ",            $r->{languages},"\n"                                            if ( defined $r->{languages} );
+        print item(),"ASN: ",                  $r->{asn},"\n"                                                  if ( defined $r->{asn} );
+        print item(),"ORG: ",                  $r->{org},"\n"                                                  if ( defined $r->{org} );
+    }
+    else
+    {
         print item(),"There Is A Problem\n\n";
         print item('1'),"Checking The Connection\n";
         print item('2'),"Enter Website Without HTTP/HTTPs\n";
