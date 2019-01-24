@@ -8,8 +8,6 @@
 <h4>Th3inspector 🕵️ best tool for Information Gathering 🔎</h4>
 <img src="https://i.imgur.com/Q81YJCU.png" data-canonical-src="https://i.imgur.com/niFwcaM.png" width="700" height="470">
 <hr>
-
-
 <h2>Screenshots</h2>
 
 <br><img src="https://i.imgur.com/4Gh978u.jpg" width="117" height="156"></img>
@@ -136,7 +134,7 @@
 <ul>
 <li>Submit new issue</li>
 <li>pm me in gmail</li>
-<li>do you want ask about all my tools ? you can add me in <a href="https://fb.me/moham3driahi">https://fb.me/moham3driahi</a></li>
+<li>do you want ask about all my tools ? you can add me in <a href="https://fb.me/mohamed.riahi.official.account">https://fb.me/mohamed.riahi.official.account</a></li>
 </ul>
 
 ## Installation [Linux](https://wikipedia.org/wiki/Linux) [![alt tag](http://icons.iconarchive.com/icons/dakirby309/simply-styled/32/OS-Linux-icon.png)](https://fr.wikipedia.org/wiki/Linux)
