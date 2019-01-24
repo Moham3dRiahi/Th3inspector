@@ -1,57 +1,56 @@
 #!/usr/bin/perl
 
 use if $^O eq "MSWin32", Win32::Console::ANSI;
-use Getopt::Long;
-use HTTP::Request;
-use LWP::UserAgent;
-use IO::Select;
-use HTTP::Headers;
-use IO::Socket;
-use HTTP::Response;
-use Term::ANSIColor;
-use HTTP::Request::Common qw(POST);
-use HTTP::Request::Common qw(GET);
-use URI::URL;
-use IO::Socket::INET;
 use Data::Dumper;
-use LWP::Simple;
+use Getopt::Long;
+use HTTP::Headers;
+use HTTP::Request::Common qw( GET POST );
+use HTTP::Request;
+use HTTP::Response;
+use IO::Select;
+use IO::Socket::INET;
+use IO::Socket;
 use JSON qw( decode_json encode_json );
+use LWP::Simple;
+use LWP::UserAgent;
+use Term::ANSIColor;
+use URI::URL;
 
 my $ua = LWP::UserAgent->new;
 $ua = LWP::UserAgent->new(keep_alive => 1);
 $ua->agent("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.63 Safari/537.31");
 
 GetOptions(
-    "h|help" => \$help,
-    "i|info=s" => \$site1,
-    "n|number=s" => \$PhoneNumber,
+    "h|help"          => \$help,
+    "i|info=s"        => \$site1,
+    "n|number=s"      => \$PhoneNumber,
     "mx|mailserver=s" => \$site2,
-    "w|whois=s" => \$site3,
-    "l|location=s" => \$site4,
-    "c|cloudflare=s" => \$site5,
-    "a|age=s" => \$site6,
-    "ua|useragent=s" => \$useragent,
-    "p|port=s" => \$target,
-    "b|bin=s" => \$bin,
-    "s|subdomain=s" => \$site8,
-    "e|email=s" => \$email,
-    "cms|cms=s" => \$site7,
+    "w|whois=s"       => \$site3,
+    "l|location=s"    => \$site4,
+    "c|cloudflare=s"  => \$site5,
+    "a|age=s"         => \$site6,
+    "ua|useragent=s"  => \$useragent,
+    "p|port=s"        => \$target,
+    "b|bin=s"         => \$bin,
+    "s|subdomain=s"   => \$site8,
+    "e|email=s"       => \$email,
+    "cms|cms=s"       => \$site7,
 );
 
-if ($help) { banner();help(); }
-if ($site1) { banner();Websiteinformation(); }
+if ($help)        { banner();help(); }
+if ($site1)       { banner();Websiteinformation(); }
 if ($PhoneNumber) { banner();Phonenumberinformation(); }
-if ($site2) { banner();FindIPaddressandemailserver(); }
-if ($site3) { banner();Domainwhoislookup(); }
-if ($site4) { banner();Findwebsitelocation(); }
-if ($site5) { banner();CloudFlare(); }
-if ($site6) { banner();DomainAgeChecker(); }
-if ($useragent) { banner();UserAgent(); }
-if ($bin) { banner();BIN(); }
-if ($site8) { banner();subdomain(); }
-if ($email) { banner();email(); }
-if ($site7) { banner();cms(); }
-if ($target) { banner();port(); }
+if ($site2)       { banner();FindIPaddressandemailserver(); }
+if ($site3)       { banner();Domainwhoislookup(); }
+if ($site4)       { banner();Findwebsitelocation(); }
+if ($site5)       { banner();CloudFlare(); }
+if ($site6)       { banner();DomainAgeChecker(); }
+if ($useragent)   { banner();UserAgent(); }
+if ($bin)         { banner();BIN(); }
+if ($site8)       { banner();subdomain(); }
+if ($email)       { banner();email(); }
+if ($site7)       { banner();cms(); }
+if ($target)      { banner();port(); }
 unless ($help|$site1|$PhoneNumber|$site2|$site3|$site4|$site5|$site6|$useragent|$bin|$email|$site7|$site8|$target) { banner();menu(); }
 
 ##### Help #######
@@ -756,29 +755,23 @@ sub BIN {
 
     $url = "https://lookup.binlist.net/$bin";
     $request = $ua->get($url);
-    $response = $request->content;
+    $response = decode_json $request->content;
 
-    if($response =~/scheme/){
+    if ( defined $response )
+    {
         print item(),"Credit card BIN number: $bin XX XXXX XXXX\n";
-        if($response =~/scheme":"(.*?)"/){
-            print item(),"Credit card brand: $1\n";
-        }if($response =~/type":"(.*?)"/){
-            print item(),"Type: $1\n";
-        }if($response =~/name":"(.*?)"/){
-            print item(),"Bank: $1\n";
-        }if($response =~/url":"(.*?)"/){
-            print item(),"Bank URL: $1\n";
-        }if($response =~/phone":"(.*?)"/){
-            print item(),"Bank Phone: $1\n";
-        }if($response =~/alpha2":"(.*?)","name":"(.*?)"/){
-            print item(),"Country Short: $1\n";
-            print item(),"Country: $2\n";
-        }if($response =~/latitude":"(.*?)"/){
-            print item(),"Latitude: $1\n";
-        }if($response =~/longitude":"(.*?)"/){
-            print item(),"Longitude: $1\n";
-        }
-    }else{
+        print item(),"Credit card brand: ", $response->{scheme}, "\n"               if ( defined $response->{scheme} );
+        print item(),"Type: ",              $response->{type}, "\n"                 if ( defined $response->{type} );
+        print item(),"Bank: ",              $response->{bank}->{name}, "\n"         if ( defined $response->{bank}->{name} );
+        print item(),"Bank URL: ",          $response->{bank}->{url}, "\n"          if ( defined $response->{bank}->{url} );
+        print item(),"Bank Phone: ",        $response->{bank}->{phone}, "\n"        if ( defined $response->{bank}->{phone} );
+        print item(),"Country Short: ",     $response->{country}->{alpha2}, "\n"    if ( defined $response->{country}->{alpha2} );
+        print item(),"Country: ",           $response->{country}->{name}, "\n"      if ( defined $response->{country}->{name} );
+        print item(),"Latitude: ",          $response->{country}->{latitude}, "\n"  if ( defined $response->{country}->{latitude} );
+        print item(),"Longitude: ",         $response->{country}->{longitude}, "\n" if ( defined $response->{country}->{longitude} );
+    }
+    else
+    {
         print item(),"There Is A Problem\n\n";
         print item(1),"Checking The Connection\n";
         print item(2),"Enter Only First 6 Digits Of A Credit Card Number\n";
