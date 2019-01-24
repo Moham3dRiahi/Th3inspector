@@ -751,77 +751,38 @@ sub DomainAgeChecker {
 }
 ######################## Credit card BIN number Check ################################
 sub BIN {
-$ua = LWP::UserAgent->new(keep_alive => 1);
-$ua->agent("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.63 Safari/537.31");
+    $ua = LWP::UserAgent->new(keep_alive => 1);
+    $ua->agent("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.63 Safari/537.31");
 
-$url = "https://lookup.binlist.net/$bin";
-$request = $ua->get($url);
-$response = $request->content;
- 
-if($response =~/scheme/){
-print color('bold red')," [";
-print color('bold green'),"+";
-print color('bold red'),"] ";
-print color("bold white"),"Credit card BIN number: $bin XX XXXX XXXX\n";
-if($response =~/scheme":"(.*?)"/){
-print color('bold red')," [";
-print color('bold green'),"+";
-print color('bold red'),"] ";
-print color("bold white"),"Credit card brand: $1\n";
-}if($response =~/type":"(.*?)"/){
-print color('bold red')," [";
-print color('bold green'),"+";
-print color('bold red'),"] ";
-print color("bold white"),"Type: $1\n";
-}if($response =~/name":"(.*?)"/){
-print color('bold red')," [";
-print color('bold green'),"+";
-print color('bold red'),"] ";
-print color("bold white"),"Bank: $1\n";
-}if($response =~/url":"(.*?)"/){
-print color('bold red')," [";
-print color('bold green'),"+";
-print color('bold red'),"] ";
-print color("bold white"),"Bank URL: $1\n";
-}if($response =~/phone":"(.*?)"/){
-print color('bold red')," [";
-print color('bold green'),"+";
-print color('bold red'),"] ";
-print color("bold white"),"Bank Phone: $1\n";
-}if($response =~/alpha2":"(.*?)","name":"(.*?)"/){
-print color('bold red')," [";
-print color('bold green'),"+";
-print color('bold red'),"] ";
-print color("bold white"),"Country Short: $1\n";    
-print color('bold red')," [";
-print color('bold green'),"+";
-print color('bold red'),"] ";
-print color("bold white"),"Country: $2\n";
-}if($response =~/latitude":"(.*?)"/){
-print color('bold red')," [";
-print color('bold green'),"+";
-print color('bold red'),"] ";
-print color("bold white"),"Latitude: $1\n";
-}if($response =~/longitude":"(.*?)"/){
-print color('bold red')," [";
-print color('bold green'),"+";
-print color('bold red'),"] ";
-print color("bold white"),"Longitude: $1\n";
-}
-}else{
-print color('bold red')," [";
-print color('bold green'),"+";
-print color('bold red'),"] ";
-print color("bold white"),"There Is A Problem\n\n";
-print color('bold red')," [";
-print color('bold green'),"1";
-print color('bold red'),"] ";
-print color("bold white"),"Checking The Connection\n";
-print color('bold red')," [";
-print color('bold green'),"2";
-print color('bold red'),"] ";
-print color("bold white"),"Enter Only First 6 Digits Of A Credit Card Number\n";
-}
+    $url = "https://lookup.binlist.net/$bin";
+    $request = $ua->get($url);
+    $response = $request->content;
+
+    if($response =~/scheme/){
+        print item(),"Credit card BIN number: $bin XX XXXX XXXX\n";
+        if($response =~/scheme":"(.*?)"/){
+            print item(),"Credit card brand: $1\n";
+        }if($response =~/type":"(.*?)"/){
+            print item(),"Type: $1\n";
+        }if($response =~/name":"(.*?)"/){
+            print item(),"Bank: $1\n";
+        }if($response =~/url":"(.*?)"/){
+            print item(),"Bank URL: $1\n";
+        }if($response =~/phone":"(.*?)"/){
+            print item(),"Bank Phone: $1\n";
+        }if($response =~/alpha2":"(.*?)","name":"(.*?)"/){
+            print item(),"Country Short: $1\n";
+            print item(),"Country: $2\n";
+        }if($response =~/latitude":"(.*?)"/){
+            print item(),"Latitude: $1\n";
+        }if($response =~/longitude":"(.*?)"/){
+            print item(),"Longitude: $1\n";
+        }
+    }else{
+        print item(),"There Is A Problem\n\n";
+        print item(1),"Checking The Connection\n";
+        print item(2),"Enter Only First 6 Digits Of A Credit Card Number\n";
+    }
 }
 ####### Subdomain Scanner #######
 sub subdomain {
@@ -865,7 +826,7 @@ sub port {
     print "\n";
     print item(),"PORT  STATE   SERVICE\n";
     my %ports = (
-        21   => 'FTP'
+         21   => 'FTP'
         ,22   => 'SSH'
         ,23   => 'Telnet'
         ,25   => 'SMTP'
