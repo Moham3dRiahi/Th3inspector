@@ -379,44 +379,18 @@ sub Phonenumberinformation {
 
     $url = "http://apilayer.net/api/validate?access_key=$api2&number=$PhoneNumber&country_code=&format=1";
     $request = $ua->get($url);
-    $response = $request->content;
-    if($response =~/"valid":true/)
-    {
-        $valid=$1;
-        print item(),"Valid : ";
-        print color("bold green"),"true\n";
+    $r = decode_json $request->content;
 
-        if($response =~/local_format":"(.*?)"/)
+    if ( defined $r )
+    {
+        foreach my $k ( sort keys %{$r} )
         {
-            $localformat=$1;
-            print item(),"Local Format : $localformat\n";
+            print item(), ucfirst($k).' : '.$r->{$k}."\n" unless ( $r->{$k} eq '' );
         }
-        if($response =~/international_format":"(.*?)"/)
-        {
-            $international_format=$1;
-            print item(),"International Format : $international_format\n";
-        }
-        if($response =~/country_name":"(.*?)"/)
-        {
-            $country_name=$1;
-            print item(),"Country : $country_name\n";
-        }
-        if($response =~/location":"(.*?)"/)
-        {
-            $location=$1;
-            print item(),"Location : $location\n";
-        }
-        if($response =~/carrier":"(.*?)"/)
-        {
-            $carrier=$1;
-            print item(),"Carrier : $carrier\n";
-        }
-        if($response =~/line_type":"(.*?)"/)
-        {
-            $line_type=$1;
-            print item(),"Line Type : $line_type\n";
-        }
-    }else {
+    
+    } 
+    else 
+    {
         print item(),"There Is A Problem\n\n";
         print item('1'),"Checking The Connection\n";
         print item('2'),"Enter Phone Number Without +/00\n";
