@@ -1,14 +1,20 @@
 <h2>Th3inspector Tool 🕵️</h2>
+
 <img align="left" width="120" height="120" src="https://i.imgur.com/63TSBiM.png">
+
 <p>Th3inspector 🕵️ best tool for Information Gathering 🔎<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐ All in one tool for Information Gathering ⭐ </p>
+
 <a href="https://github.com/Moham3dRiahi/Th3inspector"><img src="https://img.shields.io/badge/Th3inspector-1.9-brightgreen.svg" alt="Version" data-canonical-src="https://img.shields.io/badge/Th3inspector-1.9-brightgreen.svg?maxAge=259200" style="max-width:100%;"></a>
 <a href="https://github.com/Moham3dRiahi/Th3inspector"><img src="https://img.shields.io/badge/Supported%20OS-Linux%2FWindows%2FmacOS-brightgreengreen.svg" alt="Build" data-canonical-src="https://img.shields.io/badge/Supported%20OS-Linux%2FWindows%2FmacOS-brightgreengreen.svg" style="max-width:100%;"></a>
-<a href="https://github.com/Moham3dRiahi/Th3inspector/blob/master/LICENSE"><img src="https://img.shields.io/packagist/l/doctrine/orm.svg" alt="Build" data-canonical-src="https://img.shields.io/packagist/l/doctrine/orm.svg" style="max-width:100%;"></a><br>
+<a href="https://github.com/Moham3dRiahi/Th3inspector/blob/master/LICENSE"><img src="https://img.shields.io/packagist/l/doctrine/orm.svg" alt="Build" data-canonical-src="https://img.shields.io/packagist/l/doctrine/orm.svg" style="max-width:100%;"></a>
+<a href="https://inventory.rawsec.ml/tools.html#Th3inspector"><img src="https://inventory.rawsec.ml/img/badges/Rawsec-inventoried-FF5050_flat.svg" alt="Rawsec's CyberSecurity Inventory" /></a>
 
-<h4>Th3inspector 🕵️ best tool for Information Gathering 🔎</h4>
+#### Th3inspector 🕵️ best tool for Information Gathering 🔎
+
 <img src="https://i.imgur.com/Q81YJCU.png" data-canonical-src="https://i.imgur.com/niFwcaM.png" width="700" height="470">
 <hr>
-<h2>Screenshots</h2>
+
+## Screenshots
 
 <br><img src="https://i.imgur.com/4Gh978u.jpg" width="117" height="156"></img>
 <img src="https://i.imgur.com/iaPxfRW.jpg" width="32%"></img>
