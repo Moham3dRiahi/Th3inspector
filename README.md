@@ -131,11 +131,13 @@
 
 <hr>
 <h2>BUG ?</h2>
-<ul>
-<li>Submit new issue</li>
-<li>pm me in gmail</li>
-<li>do you want ask about all my tools ? you can add me in <a href="https://fb.me/mohamed.riahi.official.account">https://fb.me/mohamed.riahi.official.account</a></li>
-</ul>
+<h2>📣 My New Private Tool 📣</h2>
+[XAttacker v10 Tool ☣ Website Vulnerability Scanner & Auto Exploiter](https://youtu.be/clYspp2G2jA)
+<hr>
+<h2>📧 Contact</h2>
+<li>You Want Ask About All My Tools Or Buy Tools/Exploits Private Add Me On ICQ : moham3driahi</li>
+<hr>
+
 
 ## Installation [Linux](https://wikipedia.org/wiki/Linux) [![alt tag](http://icons.iconarchive.com/icons/dakirby309/simply-styled/32/OS-Linux-icon.png)](https://fr.wikipedia.org/wiki/Linux)
 
