@@ -5,7 +5,7 @@
 <a href="https://github.com/Moham3dRiahi/Th3inspector"><img src="https://img.shields.io/badge/Supported%20OS-Linux%2FWindows%2FmacOS-brightgreengreen.svg" alt="Build" data-canonical-src="https://img.shields.io/badge/Supported%20OS-Linux%2FWindows%2FmacOS-brightgreengreen.svg" style="max-width:100%;"></a>
 <a href="https://github.com/Moham3dRiahi/Th3inspector/blob/master/LICENSE"><img src="https://img.shields.io/packagist/l/doctrine/orm.svg" alt="Build" data-canonical-src="https://img.shields.io/packagist/l/doctrine/orm.svg" style="max-width:100%;"></a><br>
 <hr><h2>📣 🔥 Finally My New Private Tool 🔥 📣</h2>
-<h2>🌟 <a href="https://github.com/Moham3dRiahi/XAttacker/blob/master/Premium.md">XAttacker v10 Tool Premium</a> 🌟</h2>
+<h2>🌟 <a href="https://github.com/Moham3dRiahi/XAttacker/blob/master/Premium.md">XAttacker v20 Tool Premium</a> 🌟</h2>
 <hr>
 <h4>Th3inspector 🕵️ best tool for Information Gathering 🔎</h4>
 <img src="https://i.imgur.com/Q81YJCU.png" data-canonical-src="https://i.imgur.com/niFwcaM.png" width="700" height="470">
