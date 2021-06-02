@@ -132,15 +132,30 @@
 ``perl Th3inspector.pl -c example.com``
 
 <hr>
-<h2>BUG ?</h2>
-<h2>📣 My New Private Tool 📣</h2>
-[XAttacker v10 Tool ☣ Website Vulnerability Scanner & Auto Exploiter](https://youtu.be/clYspp2G2jA)
+
+## Donations
+
+Found XATTACKER cool? just drop a THANK YOU 
+this will motivate me to create more exciting stuffs for you
+
 <hr>
 <h2>📧 Contact</h2>
-<lh3>You Want Ask About All My Tools Or Buy Tools/Exploits Private Add Me On : </h3><br>
- ICQ : moham3driahi <br>Telegram : moham3driahi <br>E-mail : moham3driahi@gmail.com
+<h3>You Want Ask About All My Tools Or Buy Tools/Exploits Private Add Me On : </h3><br>
+ <tr><br>
+<td><a href="https://t.me/moham3driahi"><img src="https://img.shields.io/badge/TELEGRAM-moham3driahi-blue" alt="Version" data-canonical-src="https://img.shields.io/badge/TELEGRAM-moham3driahi-blue" style="max-width:100%;"></a></td>
+</tr>
+
+ <tr>
+<td><a href="https://icq.im/moham3driahi"><img src="https://img.shields.io/badge/ICQ-moham3driahi-brightgreen " alt="Version" data-canonical-src="https://img.shields.io/badge/ICQ-moham3driahi-brightgreen " style="max-width:100%;"></a></td>
+</tr>
+
+ <tr>
+<td><a href="mailto:mohamedriahi@gmail.com"><img src="https://img.shields.io/badge/Mail-moham3driahi%40gmail.com-red " style="max-width:100%;"></a></td>
+</tr>
 <hr>
-<hr>
+<h2>Don't Miss Out My New Telegram Channel for Updates </h2>
+
+<a href="https://t.me/moham3driahi_tools"><img src="https://img.shields.io/badge/Channel-Private%20Hacking%20Tools-red " alt="Version" data-canonical-src="https://img.shields.io/badge/Channel-Private%20Hacking%20Tools-red " style="max-width:100%;"></a>
 
 
 ## Installation [Linux](https://wikipedia.org/wiki/Linux) [![alt tag](http://icons.iconarchive.com/icons/dakirby309/simply-styled/32/OS-Linux-icon.png)](https://fr.wikipedia.org/wiki/Linux)
