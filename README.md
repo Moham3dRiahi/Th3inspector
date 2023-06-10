@@ -1,4 +1,4 @@
-## 🚀🚀🔥🔥🔥CHECK MY NEW PRO PRIVATE TOOL 🔥🔥🔥🔥🚀🚀(https://github.com/Moham3dRiahi/XAttackProV30) (http://icons(https://github.com/Moham3dRiahi/XAttackProV30)
+## 🚀🚀🔥🔥🔥CHECK MY NEW PRO PRIVATE TOOL 🔥🔥🔥🔥🚀🚀(https://github.com/Moham3dRiahi/XAttackProV30)
 
 
 <h2>Th3inspector Tool 🕵️</h2>
