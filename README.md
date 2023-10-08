@@ -140,19 +140,11 @@ Found XATTACKER cool? just drop a THANK YOU
 this will motivate me to create more exciting stuffs for you
 
 <hr>
+
 <h2>📧 Contact</h2>
-<h3>You Want Ask About All My Tools Or Buy Tools/Exploits Private Add Me On : </h3><br>
- <tr><br>
-<td><a href="https://t.me/mrmoham3driahi"><img src="https://img.shields.io/badge/TELEGRAM-MRMoham3dRiahi-blue" alt="Version" data-canonical-src="https://img.shields.io/badge/TELEGRAM-moham3driahi-blue" style="max-width:100%;"></a></td>
-</tr>
-
- <tr>
-<td><a href="mailto:mohamedriahi@gmail.com"><img src="https://img.shields.io/badge/Mail-moham3driahi%40gmail.com-red " style="max-width:100%;"></a></td>
-</tr>
-<hr>
-<h2> ✨ Finally Don't Miss Out My New Telegram Channel for Private Tools && Methods And Updates ✨ </h2>
-
-<a href="https://t.me/moham3driahi_tools"><img src="https://img.shields.io/badge/Channel-Private%20Hacking%20Tools-red " alt="Version" data-canonical-src="https://img.shields.io/badge/Channel-Private%20Hacking%20Tools-red " style="max-width:100%;"></a>
+<h3>You Want ASK About All My TOOLS Or BUY Tools/Exploits Private THIS IS ALL MY LINKS : </h3><br>
+<h3>SCAN OR CLICK ON THE IMAGE</h3><br>
+<p><a href="https://allmylinks.com/mr-moham3driahi"><img src="https://i.ibb.co/JFhFSqL/photo-2023-10-08-22-05-20.jpg" width="200" height="200" /></p></a>
 
 
 ## Installation [Linux](https://wikipedia.org/wiki/Linux) [![alt tag](http://icons.iconarchive.com/icons/dakirby309/simply-styled/32/OS-Linux-icon.png)](https://fr.wikipedia.org/wiki/Linux)
