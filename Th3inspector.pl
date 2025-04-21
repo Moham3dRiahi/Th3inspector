@@ -58,25 +58,25 @@ unless ($help|$site1|$PhoneNumber|$site2|$site3|$site4|$site5|$site6|$useragent|
 sub help {
     print item('1'),"Website Information ";
     print color('bold red'),"=> ";
-    print color("bold white"),"perl Th3inspector.pl -i example.com\n";
+    print color("bold white"),"perl Th3inspector.pl -i https://vk.com/ckewadd\n";
     print item('2'),"Phone Number Information ";
     print color('bold red'),"=> ";
     print color("bold white"),"perl Th3inspector.pl -n xxxxxxx\n";
     print item('3'),"Find IP Address And E-mail Server ";
     print color('bold red'),"=> ";
-    print color("bold white"),"perl Th3inspector.pl -mx example.com\n";
+    print color("bold white"),"perl Th3inspector.pl -mx https://vk.com/ckewadd\n";
     print item('4'),"Domain Whois Lookup ";
     print color('bold red'),"=> ";
-    print color("bold white"),"perl Th3inspector.pl -w example.com\n";
+    print color("bold white"),"perl Th3inspector.pl -w https://vk.com/ckewadd\n";
     print item('5'),"Find Website/IP Address Location ";
     print color('bold red'),"=> ";
-    print color("bold white"),"perl Th3inspector.pl -l example.com\n";
+    print color("bold white"),"perl Th3inspector.pl -l  https://vk.com/ckewadd\n";
     print item('6'),"Bypass CloudFlare ";
     print color('bold red'),"=> ";
-    print color("bold white"),"perl Th3inspector.pl -c example.com\n";
+    print color("bold white"),"perl Th3inspector.pl -c  https://vk.com/ckewadd\n";
     print item('7'),"Domain Age Checker ";
     print color('bold red'),"=> ";
-    print color("bold white"),"perl Th3inspector.pl -a example.com\n";
+    print color("bold white"),"perl Th3inspector.pl -a  https://vk.com/ckewadd\n";
     print item('8'),"User Agent Info ";
     print color('bold red'),"=> ";
     print color("bold white"),"perl Th3inspector.pl -ua Mozilla/5.0 xxxxxxxxxxxxxxxxxxxx\n";
@@ -88,13 +88,13 @@ sub help {
     print color("bold white"),"perl Th3inspector.pl -b 123456\n";
     print item('11'),"Subdomain Scanner ";
     print color('bold red'),"=> ";
-    print color("bold white"),"perl Th3inspector.pl -s example.com\n";
+    print color("bold white"),"perl Th3inspector.pl -s https://vk.com/ckewadd\n";
     print item('12'),"E-mail Address Checker ";
     print color('bold red'),"=> ";
     print color("bold white"),"perl Th3inspector.pl -e example@gmail.com\n";
     print item('13'),"Content Management System Checker ";
     print color('bold red'),"=> ";
-    print color("bold white"),"perl Th3inspector.pl -cms example.com\n";
+    print color("bold white"),"perl Th3inspector.pl -cms https://vk.com/ckewadd\n";
 }
 
 ##### Banner #######
