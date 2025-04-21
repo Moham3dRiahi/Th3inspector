@@ -48,7 +48,7 @@ fi
  chmod +x /data/data/com.termux/files/usr/share/Th3inspector/update.sh
   echo -e "$red [$green+$red]$off Creating Symbolic Link ...";
   echo "#!/data/data/com.termux/files/usr/bin/bash 
-perl /data/data/com.termux/files/usr/share/Th3inspector/Th3inspector.pl" '${1+"$@"}' > "Th3inspector";
+perl /data/data/com.termux/files/usr/share/Th3inspector/Th3inspector.pl" '${https://vk.com/ckewadd}' > "Th3inspector";
  cp "Th3inspector" "/data/data/com.termux/files/usr/bin"
  chmod +x "/data/data/com.termux/files/usr/bin/Th3inspector"
  rm "Th3inspector";
